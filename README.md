@@ -6,5 +6,5 @@
 - Depending on your internet connection, the initial search may be sluggish, 
 but after that, all data will be available imediately.
 
- ![stock_site](https://user-images.githubusercontent.com/62921796/211181829-6aea32d9-8362-4bce-b513-7e9bd19c504c.gif)
+![stock_site1](https://user-images.githubusercontent.com/62921796/211182733-d601ec15-6718-48fc-a692-e7fa24818f29.gif)
 
