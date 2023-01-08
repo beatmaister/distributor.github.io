@@ -1,6 +1,6 @@
 # distributor.github.io
 
-<h2>This site finds relevant data both by the minute,  and daily for the past month</h2></br>
+<h2>This site finds relevant data both by the minute,  and daily for the past month</h2>
 - The  input bar will only allow alphabetical characters and commas, and a maximum of 5 stock tickers
 - Please do not use a touch-screen, or attach physical keyboard.
 - Depending on your internet connection, the initial search may be sluggish, 
