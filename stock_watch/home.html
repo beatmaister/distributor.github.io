@@ -1,0 +1,169 @@
+<head>
+    <title> stock update </title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+    
+    <div class="cont">
+        <div class='nav'>
+            <form id="search_box" >
+                <input type="text" name="search" id="search" placeholder="Edit Stocks (comma spearated)">
+                <button type="submit" id="apply" class="apply"> <i class="fas fa-solid fa-pen-to-square"></i></button>
+            </form>
+        </div>
+        <div class="card">
+            <div id="name1" class="names">
+                Enter 5 tickers into the bar.
+            </div>
+            <div class="stats">
+                <ul>
+                    <li id="high1">High: </li>
+                    <li id="low1">Low: </li>
+                    <li id="volume1">Volume: </li>
+                    <li id="current1">Current: </li>
+                </ul>
+                <button class="toggle" id="toggle1">Toggle 30d/14d</button>
+            </div>
+            <div id="g1" class="graph">
+                <canvas id="graph1">
+
+                </canvas>
+                <canvas id="graphv1">
+
+                </canvas>
+            </div>
+            <div id="gm1" class="graphm">
+                <canvas id="graphm1">
+
+                </canvas>
+                <canvas id="graphvm1">
+
+                </canvas>
+            </div>
+        </div>
+        <div class="card">
+            <div id="name2" class="names">
+                Not Found
+            </div>
+            <div class="stats">
+                <ul>
+                    <li id="high2">High: </li>
+                    <li id="low2">Low: </li>
+                    <li id="volume2">Volume: </li>
+                    <li id="current2">Current: </li>
+                </ul>
+                <button class="toggle" id="toggle2">Toggle 30d/14d</button>
+            </div>
+            <div id="g2" class="graph">
+                <canvas id="graph2">
+
+                </canvas>
+                <canvas id="graphv2">
+
+                </canvas>
+            </div>
+            <div id="gm2" class="graphm">
+                <canvas id="graphm2">
+
+                </canvas>
+                <canvas id="graphvm2">
+
+                </canvas>
+            </div>
+        </div>
+        <div class="card">
+            <div id="name3" class="names">
+                Not Found
+            </div>
+            <div class="stats">
+                <ul>
+                    <li id="high3">High: </li>
+                    <li id="low3">Low: </li>
+                    <li id="volume3">Volume: </li>
+                    <li id="current3">Current: </li>
+                </ul>
+                <button class="toggle" id="toggle3">Toggle 30d/14d</button>
+            </div>
+            <div id="g3" class="graph">
+                <canvas id="graph3">
+
+                </canvas>
+                <canvas id="graphv3">
+
+                </canvas>
+            </div>
+            <div id="gm3" class="graphm">
+                <canvas id="graphm3">
+
+                </canvas>
+                <canvas id="graphvm3">
+
+                </canvas>
+            </div>
+        </div>
+        <div class="card">
+            <div id="name4" class="names">
+                Not Found
+            </div>
+            <div class="stats">
+                <ul>
+                    <li id="high4">High: </li>
+                    <li id="low4">Low: </li>
+                    <li id="volume4">Volume: </li>
+                    <li id="current4">Current: </li>
+                </ul>
+                <button class="toggle" id="toggle4">Toggle 30d/14d</button>
+            </div>
+            <div id="g4" class="graph">
+                <canvas id="graph4">
+                    
+                </canvas>
+                <canvas id="graphv4">
+
+                </canvas>
+            </div>
+            <div id="gm4" class="graphm">
+                <canvas id="graphm4">
+
+                </canvas>
+                <canvas id="graphvm4">
+
+                </canvas>
+            </div>
+        </div>
+        <div class="card">
+            <div id="name5" class="names">
+                Not Found
+            </div>
+            <div class="stats">
+                <ul>
+                    <li id="high5">High: </li>
+                    <li id="low5">Low: </li>
+                    <li id="volume5">Volume: </li>
+                    <li id="current5">Current: </li>
+                </ul>
+                <button class="toggle" id="toggle5">Toggle 30d/14d</button>
+            </div>
+            <div id="g5" class="graph">
+                <canvas id="graph5">
+
+                </canvas>
+                <canvas id="graphv5">
+
+                </canvas>
+            </div>
+            <div id="graphm5" class="graphm">
+                <canvas id="graphm5">
+
+                </canvas>
+                <canvas id="graphvm5">
+
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>

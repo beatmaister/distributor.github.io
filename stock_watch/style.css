@@ -1,0 +1,212 @@
+html{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    font-family:  helvetica, Arial, Calibri;
+    background-color: #293C4F;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1350px;
+    justify-content: center;
+    align-items: center;
+    padding:0px;
+    margin: 0px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    background-color: #20303F;
+    width: 100%;
+    height: 4%;
+    justify-content: center !important;
+    align-items: center !important;
+    margin:0;
+    padding:0;
+}
+#search_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: center !important;
+    height:100% !important;
+    width:100%;
+}
+#search{
+    height:80px;
+    width: 50vw;
+    border-radius: 5px;
+    font-size: 30px;
+    color:#90ADBE;
+    text-align: center;
+    background-color: #c6d9e9;
+}
+.apply{
+    height:75px;
+    width: 5vw;
+    margin-left: -10%;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 35px;
+    color:#90ADBE;
+    background-color: #c6d9e9;
+    opacity: 50%;
+}
+.apply>i{
+    font-size: 35px;
+    opacity: 100%;
+}
+
+.cont{
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width:100vw;
+    max-width: 1350px;
+     
+    border-left: 2px solid #a89d76;
+    border-right: 2px solid #a89d76;
+    
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-around;
+    
+    width:90%;
+    background-color: #667d8a;
+    height: 50vh;
+    border-radius: 5px;
+    border: 5px solid #a89d76;
+    padding:10px;
+    color: #20303F;
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width:30%;
+    margin:0;
+    padding:0;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.stats>ul{
+    height: 45%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:0;
+    margin:0;
+    align-items: center;
+    list-style: none;
+}
+.card:hover{
+    border: 5px solid #aa944d;                                                                 
+}
+
+.names{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:15%;
+    height: 100%;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.graph{
+    width:50% !important;
+    height:100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.graphm{
+    display: none;
+    width:50% !important;
+    height:100% !important;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.toggle{
+    width:70%;
+    min-height: 25px;
+    height: 10%;
+    background-color: #ffe17f;
+    color: #667d8a;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+@media screen and (max-width: 650px) {
+    .card{
+        flex-direction: column;
+        height: 80vh;                               
+    }
+    .card>ul{
+        position: relative;
+        padding:0px !important;
+        margin:0px !important;
+        width:100%;
+        height: 20vh;
+    }
+    .stats{
+        width: 100%;
+        height: 50%;
+    }
+    .graph{ 
+        width:100% !important;
+        
+    }
+    .graphm{
+        width:100% !important;
+        
+    }
+    #toggle{
+        width:50%;
+        height: 3vh;
+    }
+    .names{
+        width:100%;
+        height:10vh;
+    }
+    #search_box{
+        width:100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #search{
+        width:65vw;
+    }
+    .apply{
+        height:75px;
+        width: 20vw;
+        margin-left: -0%;
+        display: none;
+        border-radius: 5px;
+        border: 0px;
+        font-size: 35px;
+        text-align: center;
+        color:#90ADBE;
+        background-color: #c6d9e9;
+        opacity: 50%;
+    }
+}
