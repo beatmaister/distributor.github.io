@@ -3,7 +3,7 @@
 Chart.defaults.global.defaultFontColor = "black";
 
 // verifying input.
-const allowed = [',','q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
+const allowed = [',','q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m','Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M'];
 
 // locating all 5 separate graphs and toggle buttons.
 const button = document.getElementById("apply");
@@ -36,24 +36,28 @@ var form = document.getElementById("search_box");
 button.onclick = function() {
     value = form.elements[0].value;
     checker = value.split('');
+    var pass = true;
     for(i=0; i<checker.length; i++){
-      if(!allowed.includes(checker[i])){alert("please only enter letters and commas"); break; return;}
+      if(!allowed.includes(checker[i])){ pass=false; alert("Only valid characters please."); return;}
     }
 
     split = value.split(",");
     if(value.endsWith(',')) split[split.length-1]=null;
     if(split.length>5){
         alert("Only 5 or less companies please");
+        pass=false;
         return;
     }
-    
-    localStorage.setItem('tickers', JSON.stringify(split));
 
-    var item = 0;
-    while(item<split.length){
+    if(pass){
+      localStorage.setItem('tickers', JSON.stringify(split))
+      var item = 0;
+      while(item<split.length){  
         fillData(split[item], item+1);
         item++;
+      }
     }
+    
 }
 
 // getting all data for each stock it is called for, in 3 requests.
@@ -384,9 +388,10 @@ function  fillData(ticker, number){
               
 }
 window.addEventListener('load', ()=> {
-    stored = JSON.parse(localStorage.getItem("tickers"));
+    stored = JSON.parse(localStorage.getItem("tickers"));    
     index=0;
     if(stored==null) return;
+    bar.placeholder = stored.join(',');
     while(index<stored.length){
         fillData(stored[index], index+1);
         index++;
