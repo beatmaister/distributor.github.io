@@ -81,7 +81,9 @@ body{
     
     width:90%;
     background-color: #667d8a;
-    height: 50vh;
+    height: 55vh;
+    max-height: 640px;
+    margin-bottom: 10px;
     border-radius: 5px;
     border: 5px solid #a89d76;
     padding:10px;
@@ -156,10 +158,23 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
+.label{
+    display:none;
+    width:fit-content;
+    min-height: 25px;
+    height: fit-content;
+    background-color: transparent;
+    color: #c54853;
+    border: none;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
 @media screen and (max-width: 650px) {
     .card{
         flex-direction: column;
-        height: 80vh;                               
+        height: 80vh;
+        max-height: 80vh;                               
     }
     .card>ul{
         position: relative;

@@ -36,9 +36,9 @@ var form = document.getElementById("search_box");
 button.onclick = function() {
     value = form.elements[0].value;
     checker = value.split('');
-    checker.forEach(elem => {
-        if(!allowed.includes(elem)){ alert("please only enter letters and commas"); return; }
-    }); 
+    for(i=0; i<checker.length; i++){
+      if(!allowed.includes(checker[i])){alert("please only enter letters and commas"); break; return;}
+    }
 
     split = value.split(",");
     if(value.endsWith(',')) split[split.length-1]=null;
@@ -49,20 +49,12 @@ button.onclick = function() {
     
     localStorage.setItem('tickers', JSON.stringify(split));
 
-    var page = 0;
-    while(page<split.length){
-        fillData(split[page], page+1);
-        page++;
+    var item = 0;
+    while(item<split.length){
+        fillData(split[item], item+1);
+        item++;
     }
 }
-
-// while typing in bar, only allow set characters.
-bar.addEventListener('keydown', (e)=>{
-    if(!allowed.includes(e.key) && e.key!='Shift' && e.key!='CapsLock' && e.key!='Backspace' && e.key!='Enter'){
-        e.preventDefault();
-        alert("enter letters and commas");
-    }
-})
 
 // getting all data for each stock it is called for, in 3 requests.
 function  fillData(ticker, number){
@@ -72,6 +64,7 @@ function  fillData(ticker, number){
     const low = document.getElementById("low"+number);
     const volume = document.getElementById("volume"+number);
     const current = document.getElementById("current"+number);
+    const label = document.getElementById("label"+number);
     const graph = 'graph'+number;
     const graphv = 'graphv'+number;
     const graphm = 'graphm'+number;
@@ -91,10 +84,21 @@ function  fillData(ticker, number){
         return response.json()
     }).then(data => {
         name.innerHTML = ticker.toUpperCase();
-        high.innerHTML = 'High: ' + data[data.length-1].high;
-        low.innerHTML = 'Low: ' + data[data.length-1].low;
-        volume.innerHTML = 'Volume: ' + data[data.length-1].volume;
-        current.innerHTML = 'Current: ' + data[data.length-1].average;
+        if(data[data.length-1].average == null){
+          high.innerHTML = 'High: N/A';
+          low.innerHTML = 'Low: N/A';
+          volume.innerHTML = 'Volume: N/A';
+          current.innerHTML = 'Current: N/A';
+          label.style.display='flex';
+
+        }else{
+          high.innerHTML = 'High: ' + data[data.length-1].high;
+          low.innerHTML = 'Low: ' + data[data.length-1].low;
+          volume.innerHTML = 'Volume: ' + data[data.length-1].volume;
+          current.innerHTML = 'Current: ' + data[data.length-1].average;
+          label.style.display='none';
+
+        }         
     })
     
     // requesting past 2 weeks prices and creating graphs with data.
