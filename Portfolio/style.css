@@ -70,14 +70,14 @@ body{
     border-top-right-radius: 0px;
     margin-top: -5px;
 }
-li{
+.nav>li{
     cursor: pointer;
     width:95%;
     text-align: center;
     border-radius: 3px;
     text-decoration: none;
 }
-li:hover{
+.nav>li:hover{
     transition: .7s;
     background-color: #264270;
     color: #81a1c7;
