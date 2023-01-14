@@ -127,6 +127,7 @@ li:hover{
     font-size: 35;
     font-weight: bold;
     padding:10px;
+    padding-top: 5%;
 }
 .intro-text>a{
     line-height: 2;
@@ -679,6 +680,7 @@ a::before{
         font-weight: bold;
         height: 60%;
         width:95%;
+        padding-top: none;
     }
     #skill_title{
         font-size:20;
