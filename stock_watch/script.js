@@ -106,7 +106,7 @@ function  fillData(ticker, number){
     })
     
     // requesting past 2 weeks prices and creating graphs with data.
-    var day_url = 'https://cloud.iexapis.com/v1/stock/'+ticker.toUpperCase()+'/chart/2w/?dateField=date&chartByDay=true&token=pk_49963f2da4de4a1280e096da997ad371';
+    var day_url = 'https://cloud.iexapis.com/v1/stock/'+ticker.toUpperCase()+'/chart/2w/?dateField=date&chartByDay=true&token=pk_ed70f3a41e174c648b8e16559a31eadb';
     fetch(day_url)
     .then(response => {
         return response.json()     
@@ -247,7 +247,7 @@ function  fillData(ticker, number){
     })
 
     //requesting past month data, and creating graphs with data
-    var month_url = 'https://cloud.iexapis.com/v1/stock/'+ticker.toUpperCase()+'/chart/1m/?dateField=date&chartByDay=true&token=pk_49963f2da4de4a1280e096da997ad371';
+    var month_url = 'https://cloud.iexapis.com/v1/stock/'+ticker.toUpperCase()+'/chart/1m/?dateField=date&chartByDay=true&token=pk_ed70f3a41e174c648b8e16559a31eadb';
     fetch(month_url)
     .then(response => {
         return response.json()     
