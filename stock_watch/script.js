@@ -82,7 +82,7 @@ function  fillData(ticker, number){
     var data3 = []; var data3m = [];
     
     // requesting intra-day prices, and printing data.
-    var minute_url = 'https://cloud.iexapis.com/v1/stock/' + ticker.toUpperCase() + '/intraday-prices/?token=pk_49963f2da4de4a1280e096da997ad371';
+    var minute_url = 'https://cloud.iexapis.com/v1/stock/' + ticker.toUpperCase() + '/intraday-prices/?token=pk_ed70f3a41e174c648b8e16559a31eadb';
     fetch(minute_url)
     .then(response => {
         return response.json()
