@@ -83,7 +83,15 @@ body{
     color: #81a1c7;
 }
 
-
+.header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
 
 #content{
     display: flex;
@@ -268,7 +276,7 @@ a::before{
 .proj_title{
     width: 20%;
     min-width: 180px;
-    height: 10%;
+    height: fit-content;
     max-height: 55px;
     font-size: 40px;
     font-weight: bolder;
